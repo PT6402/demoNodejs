@@ -5,11 +5,11 @@ import morgan from "morgan";
 import createHttpError, { isHttpError } from "http-errors";
 import { StatusCodes } from "http-status-codes";
 import cors from "cors";
-import env from "./util/validateEnv";
+// import env from "./util/validateEnv";
 import mongoose from "mongoose";
 // -----------------
 const app = express();
-const port = env.PORT;
+// const port = env.PORT;
 app.use(
   cors({
     credentials: true,
@@ -37,14 +37,14 @@ app.use(
   }
 );
 
-mongoose
-  .connect(env.MONGODB_CONNECTION_STRING)
-  .then(() => {
-    console.log("connection mongodb success!");
-    app.listen(port, () => {
-      console.log(`server running on http://localhost:${port}`);
-    });
-  })
-  .catch((error) => console.log(error));
+app.listen(8080, () => {
+  console.log(`server running on http://localhost:${8080}`);
+});
+// mongoose
+//   .connect(env.MONGODB_CONNECTION_STRING)
+//   .then(() => {
+//     console.log("connection mongodb success!");
+//   })
+//   .catch((error) => console.log(error));
 
 export default app;
