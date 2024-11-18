@@ -1,6 +1,6 @@
 {
   "version": 2,
-   "routes":[{"src":"/(.*)","dest":"build/index.js"}],
+   "routes":[{"src":"/(.*)","dest":"/"}],
    "builds": [
       {
         "src": "build/index.js",
