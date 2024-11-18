@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "api/index.js": {
+    "build/app.js": {
       "memory": 1024
     }
   },
