@@ -2,9 +2,6 @@
   "name": "demo",
   "version": "1.0.0",
   "main": "app.ts",
-  "engines": {
-    "node": "20.x"
-  },
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/index.js",
