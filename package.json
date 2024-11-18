@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.ts",
   "scripts": {
-    "build": "nodemon index.ts",
+    "build": "nodemon ./src/index.ts",
     "start": "nodemon index.ts",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
