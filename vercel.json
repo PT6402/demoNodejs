@@ -1,4 +1,9 @@
 {
   "version": 2,
-   "rewrites":[{"source":"/build/(.*)","destination":"/build"}]
+  "functions": {
+    "api/index.js": {
+      "memory": 1024
+    }
+  },
+   "rewrites":[{"source":"/(.*)","destination":"build/app.js"}]
 }
