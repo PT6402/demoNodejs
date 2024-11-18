@@ -32,11 +32,9 @@ const morgan_1 = __importDefault(require("morgan"));
 const http_errors_1 = __importStar(require("http-errors"));
 const http_status_codes_1 = require("http-status-codes");
 const cors_1 = __importDefault(require("cors"));
-const validateEnv_1 = __importDefault(require("./util/validateEnv"));
-const mongoose_1 = __importDefault(require("mongoose"));
 // -----------------
 const app = (0, express_1.default)();
-const port = validateEnv_1.default.PORT;
+// const port = env.PORT;
 app.use((0, cors_1.default)({
     credentials: true,
 }));
@@ -57,13 +55,13 @@ app.use((error, req, res, next) => {
     }
     res.status(statusCode).json({ error: errorMessage });
 });
-mongoose_1.default
-    .connect(validateEnv_1.default.MONGODB_CONNECTION_STRING)
-    .then(() => {
-    console.log("connection mongodb success!");
-    app.listen(port, () => {
-        console.log(`server running on http://localhost:${port}`);
-    });
-})
-    .catch((error) => console.log(error));
+app.listen(8080, () => {
+    console.log(`server running on http://localhost:${8080}`);
+});
+// mongoose
+//   .connect(env.MONGODB_CONNECTION_STRING)
+//   .then(() => {
+//     console.log("connection mongodb success!");
+//   })
+//   .catch((error) => console.log(error));
 exports.default = app;
