@@ -1,9 +1,4 @@
 {
   "version": 2,
-  "functions": {
-    "build/app.js": {
-      "memory": 1024
-    }
-  },
    "rewrites":[{"source":"/(.*)","destination":"build/app.js"}]
 }
