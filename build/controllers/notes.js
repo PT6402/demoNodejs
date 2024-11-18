@@ -26,9 +26,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var express_1 = __importDefault(require("express"));
-var NotesController = __importStar(require("../services/notes"));
-var router = express_1.default.Router();
+const express_1 = __importDefault(require("express"));
+const NotesController = __importStar(require("../services/notes"));
+const router = express_1.default.Router();
 router.get("/", NotesController.getNotes);
 router.get("/:noteId", NotesController.getNote);
 router.post("/", NotesController.createNote);
