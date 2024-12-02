@@ -21,9 +21,9 @@ app.use(express.json());
 app.use("/", (req, res, next) => {
   res.status(StatusCodes.OK).json("hellow world");
 });
-app.use((req, res, next) =>
-  next(createHttpError(StatusCodes.NOT_FOUND, "endpoint not found"))
-);
+// app.use((req, res, next) =>
+//   next(createHttpError(StatusCodes.NOT_FOUND, "endpoint not found"))
+// );
 app.use(
   (error: unknown, req: Request, res: Response, next: NextFunction): void => {
     console.error(error);
