@@ -37,14 +37,13 @@ app.use(
   }
 );
 
-app.listen(port, () => {
-  console.log(`server running on http://localhost:${port}`);
-});
-// mongoose
-//   .connect(env.MONGODB_CONNECTION_STRING)
-//   .then(() => {
-//     console.log("connection mongodb success!");
-//   })
-//   .catch((error) => console.log(error));
+app.listen(port, () => {});
+mongoose
+  .connect(env.MONGODB_CONNECTION_STRING)
+  .then(() => {
+    console.log("connection mongodb success!");
+    console.log(`server running on http://localhost:${port}`);
+  })
+  .catch((error) => console.log(error));
 
 export default app;
